@@ -1,0 +1,260 @@
+{
+	"v": "5.1.18",
+	"fr": 60,
+	"ip": 0,
+	"op": 309,
+	"w": 1920,
+	"h": 1080,
+	"nm": "Final Comp",
+	"ddd": 0,
+	"assets": [],
+	"fonts": {
+    "list": [{
+      "origin": 1,
+      "fPath": "https://fonts.googleapis.com/css?family=Coda+Caption:800",
+      "fClass": "",
+      "fFamily": "Coda Caption",
+      "fWeight": "",
+      "fStyle": "Regular",
+      "fName": "Gaegu",
+      "ascent": 72.0085961911827
+    }]
+  },
+	"layers": [{
+		"ddd": 0,
+		"ind": 1,
+		"ty": 3,
+		"nm": "move_text1",
+		"sr": 1,
+		"ks": {
+			"o": {
+				"a": 0,
+				"k": 0,
+				"ix": 11
+			},
+			"r": {
+				"a": 0,
+				"k": 0,
+				"ix": 10
+			},
+			"p": {
+				"a": 0,
+				"k": [84, 127, 0],
+				"ix": 2
+			},
+			"a": {
+				"a": 0,
+				"k": [0, 0, 0],
+				"ix": 1
+			},
+			"s": {
+				"a": 0,
+				"k": [100, 100, 100],
+				"ix": 6
+			}
+		},
+		"ao": 0,
+		"ip": 0,
+		"op": 310,
+		"st": 0,
+		"bm": 0
+	}, {
+		"ddd": 0,
+		"ind": 2,
+		"ty": 5,
+		"nm": "text1",
+		"parent": 1,
+		"sr": 1,
+		"ks": {
+			"o": {
+				"a": 1,
+				"k": [{
+					"i": {
+						"x": [0.833],
+						"y": [0.833]
+					},
+					"o": {
+						"x": [0.167],
+						"y": [0.167]
+					},
+					"n": ["0p833_0p833_0p167_0p167"],
+					"t": 0,
+					"s": [0],
+					"e": [100]
+				}, {
+					"i": {
+						"x": [0.833],
+						"y": [0.833]
+					},
+					"o": {
+						"x": [0.167],
+						"y": [0.167]
+					},
+					"n": ["0p833_0p833_0p167_0p167"],
+					"t": 62.4,
+					"s": [100],
+					"e": [100]
+				}, {
+					"i": {
+						"x": [0.833],
+						"y": [0.833]
+					},
+					"o": {
+						"x": [0.167],
+						"y": [0.167]
+					},
+					"n": ["0p833_0p833_0p167_0p167"],
+					"t": 276,
+					"s": [100],
+					"e": [0]
+				}, {
+					"t": 316.80078125
+				}],
+				"ix": 11
+			},
+			"r": {
+				"a": 0,
+				"k": 0,
+				"ix": 10
+			},
+			"p": {
+				"a": 1,
+				"k": [{
+					"i": {
+						"x": 0,
+						"y": 1
+					},
+					"o": {
+						"x": 0.167,
+						"y": 0.167
+					},
+					"n": "0_1_0p167_0p167",
+					"t": 0,
+					"s": [0, 146, 0],
+					"e": [0, 0, 0],
+					"to": [0, -24.3333339691162, 0],
+					"ti": [0, 24.3333339691162, 0]
+				}, {
+					"i": {
+						"x": 0,
+						"y": 0
+					},
+					"o": {
+						"x": 0.333,
+						"y": 0.333
+					},
+					"n": "0_0_0p333_0p333",
+					"t": 62.4,
+					"s": [0, 0, 0],
+					"e": [0, 0, 0],
+					"to": [0, 0, 0],
+					"ti": [0, 0, 0]
+				}, {
+					"i": {
+						"x": 1,
+						"y": 1
+					},
+					"o": {
+						"x": 1,
+						"y": 0
+					},
+					"n": "1_1_1_0",
+					"t": 264,
+					"s": [0, 0, 0],
+					"e": [0, -161, 0],
+					"to": [0, -26.8333339691162, 0],
+					"ti": [0, 26.8333339691162, 0]
+				}, {
+					"t": 316.80078125
+				}],
+				"ix": 2
+			},
+			"a": {
+				"a": 0,
+				"k": [-1569.029, -161.767, 0],
+				"ix": 1
+			},
+			"s": {
+				"a": 0,
+				"k": [100, 100, 100],
+				"ix": 6,
+				"x": "var $bm_rt;\nvar txt, txt_w, txt_h, comp_w, comp_h, N_w, N_h, max_w, x, x, max_h, y, y;\ntxt = thisComp.layer(index);\ntxt_w = txt.sourceRectAtTime(time, false).width;\ntxt_h = txt.sourceRectAtTime(time, false).height;\ncomp_w = thisComp.width;\ncomp_h = thisComp.height;\nN_w = div(thisComp.layer(index).effect('Width Limit')('Slider').value, 100);\nN_h = div(thisComp.layer(index).effect('Height Limit')('Slider').value, 100);\nmax_w = mul(comp_w, N_w);\nif (txt_w > max_w) {\n    x = div(mul(max_w, 100), txt_w);\n} else {\n    x = 100;\n}\nmax_h = mul(comp_h, N_h);\nif (txt_h > max_h) {\n    y = div(mul(max_h, 100), txt_h);\n} else {\n    y = 100;\n}\n$bm_rt = [\n    x,\n    y\n];"
+			}
+		},
+		"ao": 0,
+		"ef": [{
+			"ty": 5,
+			"nm": "Width Limit",
+			"np": 3,
+			"mn": "ADBE Slider Control",
+			"ix": 1,
+			"en": 1,
+			"ef": [{
+				"ty": 0,
+				"nm": "Slider",
+				"mn": "ADBE Slider Control-0001",
+				"ix": 1,
+				"v": {
+					"a": 0,
+					"k": 98,
+					"ix": 1
+				}
+			}]
+		}, {
+			"ty": 5,
+			"nm": "Height Limit",
+			"np": 3,
+			"mn": "ADBE Slider Control",
+			"ix": 2,
+			"en": 1,
+			"ef": [{
+				"ty": 0,
+				"nm": "Slider",
+				"mn": "ADBE Slider Control-0001",
+				"ix": 1,
+				"v": {
+					"a": 0,
+					"k": 82,
+					"ix": 1
+				}
+			}]
+		}],
+		"t": {
+			"d": {
+				"k": [{
+					"s": {
+						"sz": [1854, 1566],
+						"ps": [-1624, -161],
+						"s": 200,
+						"f": "Gaegu",
+						"t": "highlighted\r\rHIGHLIGHTED",
+						"j": 2,
+						"tr": 0,
+						"lh": 200,
+						"ls": 0,
+						"fc": [0, 0, 0],
+						"sc": [1, 1, 1],
+						"sw": 0.00999999977648,
+						"of": false
+					},
+					"t": 0
+				}]
+			},
+			"p": {},
+			"m": {
+				"g": 1,
+				"a": {
+					"a": 0,
+					"k": [0, 0],
+					"ix": 2
+				}
+			},
+			"a": []
+		},
+		"ip": 0,
+		"op": 310,
+		"st": 0,
+		"bm": 0
+	}],
+	"markers": []
+}
