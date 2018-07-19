@@ -14,7 +14,7 @@
         }
 
         #lottie {
-            display: block;            
+            display: block;
             width: 50%;
             height: 50%;
             margin: 0 auto;
@@ -22,19 +22,67 @@
             transform: translate3d(0, 0, 0);
             text-align: center;
             opacity: 1;
-            margin-top:20px;
+            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
     <div id="utility">
+        <div id="inputtext" contenteditable="true" style="background-color: blue;display: inline-block; min-width:50px; min-height: 30px;"></div>
     </div>
+    <input type="text" id="tekst" />
     <div id="lottie"></div>
 
     <script src="jquery-3.3.1.js"></script>
     <script src="lottie-5.1.20.js"></script>
     <script src="script2.js"></script>
+    <script>
+        $(document).on('keyup', '#inputtext', function () {
+            var val = $(this).html();
+            //da li je ostao samo br a polje je prazno
+            if (val.length == 4 && val == '<br>') {
+                console.log("ostao br");
+                $(this).html("");
+                val = "";
+            }
+            var linebreakRgx = new RegExp(/<br>/gi);
+            var whitespaceRgx = new RegExp(/&nbsp;/gi);
+            function checkLB(){
+                return val.match(linebreakRgx);
+            }
+            function checkWS(){
+                return val.match(whitespaceRgx);
+            }
+            if(checkLB){
+                console.log("ima novog reda");
+            }
+            if (checkWS) console.log("ima white space a");
+            return false;
+            
+            let nizRedova = val.trim().split("<br>");
+            console.log("nizRedovabezfiltera", nizRedova);
+            let noviniz = nizRedova.filter(Boolean);
+            console.log("filterer", noviniz);
+            for (let i = 0; i < noviniz.length; i++) {
+                var novinovi = noviniz[i].replace("/&nbsp;/gi", "");
+            }
+            console.log("posle brisanja space-ova", novinovi);
+
+            // count = (val.match(/<br>/g) || []).length;
+            // JSONdata.layers[1].t.d.k[0].s.t = val+"\r"+val+"\r"+val+"\r"+val;
+            // JSONdata.layers[1].t.d.k[0].s.t = val;
+            // restartLottie();
+        });
+        $(document).on('keydown', '#inputtext', function (e) {
+            if (e.keyCode === 13) {
+                // insert 2 br tags (if only one br tag is inserted the cursor won't go to the next line)
+                document.execCommand('insertHTML', false, '<br><br>');
+                // prevent the default behaviour of return key pressed                
+                return false;
+            }
+        });
+    </script>
 </body>
 
 </html>

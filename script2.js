@@ -22,7 +22,7 @@ function start() {//this is svg renderer
         animationData: JSONdata
     };
     anim = lottie.loadAnimation(animData);
-    if(anim) console.log("started");
+    // if(anim) console.log("started");
 }
 
 function start2() { //this is canvas renderer
@@ -70,7 +70,7 @@ $(document).on('click','#text-position ul li',function(){
     updatePosition();
 });
 function restartLottie() {
-    console.log("restartujem lottie");
+    // console.log("restartujem lottie");
     if(anim) anim.destroy();
     // bgVideo.currentTime = 0;
     // bgVideo.play();
@@ -325,7 +325,12 @@ $(document).ready(function () {
         selectFont+="<option value='"+fontList[i]+"'>"+fontName+"</option>"
     }
     selectFont+='</select>';
-    $('#utility').html(selectFont);
+    $('#utility').append(selectFont);
+});
+$(document).on('keyup','#tekst',function(){
+    let val = $(this).val();
+    JSONdata.layers[1].t.d.k[0].s.t = val;
+    restartLottie();
 });
 function lottieUpdateTextValue(text){
     JSONdata.layers[1].t.d.k[0].s.t=text;
